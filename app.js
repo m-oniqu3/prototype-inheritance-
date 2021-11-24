@@ -34,6 +34,12 @@ const person1 = new Person("Abel", "Tesfaye");
 console.log(person1);
 console.log(person1.sayFullName());
 
+//Override the Person sayFullName method
+Teacher.prototype.sayFullName = function () {
+  //returning the first and last names with template literals
+  return `Your name is ${this.firstname} ${this.lastname}`;
+};
+
 //create an instance of a teacher
 const teacher1 = new Teacher("Tom", "Segura", "English");
 console.log(teacher1);
